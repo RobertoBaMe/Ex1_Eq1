@@ -7,6 +7,9 @@ public class SnakeController : MonoBehaviour
     [SerializeField] float move_Speed = 2f;
     [SerializeField] float rotationSpeed = 180.0f;
     public GameObject PrefabBody;
+
+    public GameObject applePreFab;
+
     public float insert = 40;
 
     public List<GameObject> namesOfDestroyedObjects = new List<GameObject>();
@@ -54,7 +57,14 @@ public class SnakeController : MonoBehaviour
         if(other.tag == "Apple")
         {
             Destroy(other.gameObject);
+            
+            //Reaparecen las manzanas en posicion random
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 25), 0, Random.Range(-25, 25));
+            Instantiate(applePreFab, randomSpawnPosition, Quaternion.identity);
+
             SnakePrefab();
+            
+
         }
     }
 
@@ -63,4 +73,6 @@ public class SnakeController : MonoBehaviour
         GameObject prefab = Instantiate(PrefabBody);
         namesOfDestroyedObjects.Add(prefab);
     }
+
+   
 }
