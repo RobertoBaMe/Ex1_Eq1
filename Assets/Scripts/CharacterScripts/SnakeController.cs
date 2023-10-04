@@ -93,7 +93,7 @@ public class SnakeController : MonoBehaviour
     {
         if (other.tag == "Apple")
         {
-<<<<<<< HEAD
+
             Destroy(other.gameObject);
             
             //Reaparecen las manzanas en posicion random
@@ -103,12 +103,12 @@ public class SnakeController : MonoBehaviour
             SnakePrefab();
             
 
-=======
+
             //Destroy(other.gameObject);    //Esta parte se cambio al script Apple
             SnakePrefab();
             // Incrementar la velocidad al recolectar una manzana
             move_Speed += speedIncrementPerApple;
->>>>>>> f19356ae4be5d14474470f177e3ed166bdeb6d3d
+
         }
     }
 
@@ -117,10 +117,9 @@ public class SnakeController : MonoBehaviour
         GameObject prefab = Instantiate(PrefabBody);
         namesOfDestroyedObjects.Add(prefab);
     }
-<<<<<<< HEAD
+
 
    
 }
-=======
-}
->>>>>>> f19356ae4be5d14474470f177e3ed166bdeb6d3d
+
+

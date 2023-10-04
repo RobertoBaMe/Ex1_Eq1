@@ -605,6 +605,7 @@ MonoBehaviour:
   move_Speed: 2
   rotationSpeed: 180
   PrefabBody: {fileID: 5158965643516025462, guid: f2b5fcde7da92044a9d650beb63e79bc, type: 3}
+  applePreFab: {fileID: 1285185109704656059, guid: 7c1c1005bf1bdfd4a8cce2cf01f457ac, type: 3}
   insert: 20
   namesOfDestroyedObjects: []
   positionSnake: []
