@@ -503,7 +503,7 @@ GameObject:
   - component: {fileID: 246874367}
   m_Layer: 0
   m_Name: Snake
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,9 +605,13 @@ MonoBehaviour:
   move_Speed: 2
   rotationSpeed: 180
   PrefabBody: {fileID: 5158965643516025462, guid: f2b5fcde7da92044a9d650beb63e79bc, type: 3}
-  insert: 40
+  insert: 20
   namesOfDestroyedObjects: []
   positionSnake: []
+  maxSpeed: 30
+  minSpeed: 5
+  speedChangeRate: 2
+  speedIncrementPerApple: 1
 --- !u!54 &246874367
 Rigidbody:
   m_ObjectHideFlags: 0

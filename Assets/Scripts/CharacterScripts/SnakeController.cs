@@ -90,9 +90,8 @@ public class SnakeController : MonoBehaviour
     {
         if (other.tag == "Apple")
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);    //Esta parte se cambio al script Apple
             SnakePrefab();
-
             // Incrementar la velocidad al recolectar una manzana
             move_Speed += speedIncrementPerApple;
         }
