@@ -98,7 +98,7 @@ public class SnakeController : MonoBehaviour
             
             //Reaparecen las manzanas en posicion random
             Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 25), 0, Random.Range(-25, 25));
-            Instantiate(applePreFab, randomSpawnPosition, Quaternion.identity);
+            Instantiate(other, randomSpawnPosition, Quaternion.identity);
 
             SnakePrefab();
             
