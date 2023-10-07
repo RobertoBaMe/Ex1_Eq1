@@ -195,6 +195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 746a44157ede23e459171f4473960f2f, type: 3}
+--- !u!4 &125647601 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 680817509430128918, guid: 3632e230296e22b42856116aeefb35a0, type: 3}
+  m_PrefabInstance: {fileID: 1477785165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183421270
 GameObject:
   m_ObjectHideFlags: 0
@@ -3774,6 +3779,7 @@ GameObject:
   - component: {fileID: 2021035359}
   - component: {fileID: 2021035358}
   - component: {fileID: 2021035363}
+  - component: {fileID: 2021035364}
   m_Layer: 0
   m_Name: CAMARA
   m_TagString: MainCamera
@@ -4020,6 +4026,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2021035364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021035357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3dda34bcbbc69c4eb4f560265915909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 125647601}
+  smoothTime: 0
 --- !u!114 &2030703301 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 692795317, guid: 12085b00c29e55a4095dfb7c5272949a, type: 3}
