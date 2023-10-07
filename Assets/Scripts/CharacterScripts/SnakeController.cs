@@ -6,6 +6,8 @@ public class SnakeController : MonoBehaviour
 {
     [SerializeField] float move_Speed = 2f;
     [SerializeField] float rotationSpeed = 180.0f;
+    [SerializeField] private GameObject panelGameOver;
+
     public GameObject PrefabBody;
 
     public GameObject applePreFab;
@@ -91,21 +93,23 @@ public class SnakeController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        //Cuando la serpiente choca con un Obsta se dispara el evento de Game Over
+        if (other.tag == "Obsta")
+        {
+            panelGameOver.SetActive(true);
+            Time.timeScale = 0;
+        }
+
         if (other.tag == "Apple")
         {
-
             Destroy(other.gameObject);
-            
+
             //Reaparecen las manzanas en posicion random
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-25, 25), 0, Random.Range(-25, 25));
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-40, 40), 0, Random.Range(-40, 40));
             Instantiate(other, randomSpawnPosition, Quaternion.identity);
 
             SnakePrefab();
             
-
-
-            //Destroy(other.gameObject);    //Esta parte se cambio al script Apple
-            SnakePrefab();
             // Incrementar la velocidad al recolectar una manzana
             move_Speed += speedIncrementPerApple;
 
